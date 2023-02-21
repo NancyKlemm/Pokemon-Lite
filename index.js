@@ -30,21 +30,21 @@ class Pokemon {
             this.magic -= this.skills.kT
         // Kampfunfähigkeitsprüfung
         } else if(target.health <= 0){
-            return `${this.name} defeated ${target.name}. You won the Battle!` 
-       // Prüfung der Ausführbarkeit der Attacke
-        } else if (target.health > 0) {
-           const dam = target.health - this.skills[index].damage;
+            return `${this.name} defeated ${target.name}. ${this.name} won the Battle!` 
+        // Prüfung der Ausführbarkeit der Attacke
+        } else if (target.health >= 0) {
+           target.health -= this.skills[index].damage;
             return `${this.name} launched skill ${this.skills[index].name} successfully
-            ${target.name} got ${dam} health and got ${this.skills[index].damage} damage`
-
+            ${target.name} has ${target.health} health and got ${this.skills[index].damage} damage`
         // Prüfung der KT Kosten
-        } else if (this.magic <= this.skills.kT){
+        } else if (this.magic <= this.skills[index].kT){
            return `not enough magic, cannot launch attack!`}
         }
        
     getMagic(){
            const newMagic = this.magic + 20;
-            return `${this.name} got ${newMagic} magic back`
+            return `${this.name} got 20 magic back
+            ${this.name} has ${newMagic} magic`
     }
 }
 
@@ -68,7 +68,7 @@ class AttackSkill {
 
 let lightning = new AttackSkill("lightning", 40, 30);
 let thunder = new AttackSkill("thunder", 80, 50);
-console.log('num 1' +pikachu.skills);
+console.log(pikachu.skills);
 console.log(pikachu.learnAttackSkill(lightning));
 console.log(pikachu);
 console.log(pikachu.learnAttackSkill(thunder));
@@ -86,11 +86,11 @@ console.log(bulbasaur);
 console.log(bulbasaur.learnAttackSkill(razorLeaf));
 console.log(bulbasaur);
 
-
+console.log("-----------------------------------");
 // Fight
-console.log('First fight ' +pikachu.showStatus());
+console.log(pikachu.showStatus());
 console.log(bulbasaur.showStatus());
-console.log("_________________________________");
+console.log("------------------------------------");
 console.log(pikachu.attack(0, bulbasaur));
 console.log(bulbasaur.attack(0, pikachu));
 console.log("_________________________________");
@@ -102,5 +102,3 @@ console.log(pikachu.attack(0, bulbasaur));
 console.log(pikachu.getMagic());
 console.log(pikachu.attack(0, bulbasaur));
 console.log(bulbasaur.attack(0, pikachu));
-
-console.log(pikachu);
