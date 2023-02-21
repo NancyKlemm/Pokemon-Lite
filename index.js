@@ -34,8 +34,9 @@ class Pokemon {
        // Prüfung der Ausführbarkeit der Attacke
         } else if (target.health > 0) {
            const dam = target.health - this.skills[index].damage;
-            return `${this.name} launched skill ${this.skills[0]} successfully
-            ${target.name} got ${dam} damage`
+            return `${this.name} launched skill ${this.skills[index].name} successfully
+            ${target.name} got ${dam} health and got ${this.skills[index].damage} damage`
+
         // Prüfung der KT Kosten
         } else if (this.magic <= this.skills.kT){
            return `not enough magic, cannot launch attack!`}
@@ -67,7 +68,7 @@ class AttackSkill {
 
 let lightning = new AttackSkill("lightning", 40, 30);
 let thunder = new AttackSkill("thunder", 80, 50);
-console.log(pikachu.skills);
+console.log('num 1' +pikachu.skills);
 console.log(pikachu.learnAttackSkill(lightning));
 console.log(pikachu);
 console.log(pikachu.learnAttackSkill(thunder));
@@ -87,13 +88,15 @@ console.log(bulbasaur);
 
 
 // Fight
-console.log(pikachu.showStatus());
+console.log('First fight ' +pikachu.showStatus());
 console.log(bulbasaur.showStatus());
-
+console.log("_________________________________");
 console.log(pikachu.attack(0, bulbasaur));
 console.log(bulbasaur.attack(0, pikachu));
+console.log("_________________________________");
 console.log(pikachu.showStatus());
 console.log(bulbasaur.showStatus());
+console.log("_________________________________");
 console.log(pikachu.attack(0, bulbasaur));
 console.log(pikachu.attack(0, bulbasaur));
 console.log(pikachu.getMagic());
