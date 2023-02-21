@@ -1,1 +1,6 @@
-test
+///////// Pokemon Lite /////////
+
+// Class
+class Pokemon = {
+    
+}
