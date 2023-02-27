@@ -44,7 +44,7 @@ class Pokemon {
             }
             // // Wenn die Magie kleiner als die Magic Points ist, dann ist nicht genug Magie für den Angriff übrig
             else if (this.magic < this.skills[index].magicPoints) {
-            return `not enough magic, cannot launch attack!`;
+                return `not enough magic, cannot launch attack!`;
             }
 
             // // Das Pokemon wurde bereits besiegt!
@@ -162,31 +162,32 @@ console.log(arcanine.learnAttackSkill(ember));
 // console.log(arcanine);
 
 // Battle
-console.log("---------------Battle-1---------------------------------------------");
-console.log("----status-before-the-battle-begins----------------------");
+console.log("---------------Battle-1----------------");
+console.log("----status-before-the-battle-begins----");
 console.log(pikachu.showStatus());
 console.log(bulbasaur.showStatus());
-console.log("--------------Battle-start!------------------------------");
+console.log("--------------Battle-start!-------------");
 console.log(pikachu.attack(0, bulbasaur));
 console.log(bulbasaur.attack(0, pikachu));
-console.log("--------status-during-the-battle!------------------------");
+console.log("--------status-during-the-battle!-------");
 console.log(pikachu.showStatus());
 console.log(bulbasaur.showStatus());
-console.log("----------continue-the-battle!---------------------------");
+console.log("----------continue-the-battle!----------");
 console.log(pikachu.attack(0, bulbasaur));
 console.log(pikachu.attack(0, bulbasaur));
-console.log("------------get-magic-plus-------------------------------");
+console.log("------------get-magic-plus--------------");
 console.log(pikachu.getMagic());
-console.log("----------continue-the-battle!---------------------------");
+console.log("----------continue-the-battle!----------");
 console.log(pikachu.attack(0, bulbasaur));
-console.log("--------------Battle-end!--------------------------------");
+console.log("--------------Battle-end!---------------");
 console.log(bulbasaur.attack(0, pikachu));
 console.log(bulbasaur.showStatus());
 
-// console.log("______________________________________________________");
+console.log("__________________________________________");
 
-// console.log("---------------Battle-2-------------------------------");
-// console.log("----status-before-the-battle-begins-------------------");
-// console.log(umbreon.showStatus());
-// console.log(gardevoir.showStatus());
-// console.log("--------------Battle-start!---------------------------");
+console.log("---------------Battle-2----------------");
+console.log("----status-before-the-battle-begins----");
+console.log(umbreon.showStatus());
+console.log(gardevoir.showStatus());
+console.log("--------------Battle-start!-------------");
+console.log(umbreon.attack(0, gardevoir));
