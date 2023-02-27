@@ -22,7 +22,7 @@ class Pokemon {
 
     attack(index, target) {
         // Kampfüberprüfung
-        // // Wenn die gegnerische Gesundheit größer 0 ist, dann bekommt der Gegner Damage
+        // // Wenn die gegnerische Gesundheit größer 0 und die eigene Gesundheit größer 0 ist, dann bekommt der Gegner Damage
         if (target.health > 0 && this.health > 0) {
             let battleHealth = target.health - this.skills[index].damage;
 
@@ -31,7 +31,7 @@ class Pokemon {
             if (this.magic >= this.skills[index].magicPoints) {
                 this.magic -= this.skills[index].magicPoints;
 
-                // Wenn die gegnerische Gesundheit kleiner oder gleich 0 ist, dann hat das angreifende Pokemon gewonnen
+                // Wenn die gegnerische Gesundheit kleiner gleich 0 ist, dann hat das angreifende Pokemon gewonnen
                 if (battleHealth <= 0) {
                     target.health -= this.skills[index].damage;
                     return `${this.name} launched skill ${this.skills[index].name} successfully 
@@ -90,10 +90,10 @@ const spark = new AttackSkill("spark", 70, 50);
 const thunder = new AttackSkill("thunder", 100, 50);
 console.log(pikachu.skills);
 console.log(pikachu.learnAttackSkill(lightning));
-console.log(pikachu);
-console.log(pikachu.learnAttackSkill(thunderShock));
-console.log(pikachu.learnAttackSkill(spark));
-console.log(pikachu.learnAttackSkill(thunder));
+// console.log(pikachu);
+// console.log(pikachu.learnAttackSkill(thunderShock));
+// console.log(pikachu.learnAttackSkill(spark));
+// console.log(pikachu.learnAttackSkill(thunder));
 console.log(pikachu);
 
 // Bulbasaur Attacks
@@ -175,6 +175,7 @@ console.log(bulbasaur.showStatus());
 console.log("----------continue-the-battle!---------------------------");
 console.log(pikachu.attack(0, bulbasaur));
 console.log(pikachu.attack(0, bulbasaur));
+console.log(pikachu.showStatus());
 console.log("------------get-magic-plus-------------------------------");
 console.log(pikachu.getMagic());
 console.log("----------continue-the-battle!---------------------------");
