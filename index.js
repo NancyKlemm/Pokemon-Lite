@@ -59,10 +59,10 @@ class Pokemon {
         return `${this.name} got ${magicPlus} magic back`;
     }
 
-    usePoison() {
-        const poison = 30;
-        this.health += poison;
-        return `${this.name} got ${poison} health back`;
+    usePotion() {
+        const potion = 30;
+        this.health += potion;
+        return `${this.name} got ${potion} health back`;
     }
 }
 
