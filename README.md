@@ -89,3 +89,5 @@ bulbasaur.attack(0, pikachu);
 // That's just one example. You can call different series of attacks to get different results!
 ```
 ## Bonus: Add some more Pokemon and attack types. 
+
+### ReadMe.md is a template 
