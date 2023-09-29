@@ -87,3 +87,5 @@ bulbasaur.attack(0, pikachu);
 // Das ist nur ein Beispiel. Du kannst verschiedene Angriffsserien aufrufen, um unterschiedliche Ergebnisse zu erzielen!
 ```
 ## Bonus: Füge weitere Pokemon und Angriffstypen hinzu.
+
+### README.md ist ein Template
