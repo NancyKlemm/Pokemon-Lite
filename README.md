@@ -90,4 +90,4 @@ bulbasaur.attack(0, pikachu);
 ```
 ## Bonus: Add some more Pokemon and attack types. 
 
-### ReadMe.md is a template 
+#### README.md is a template 
